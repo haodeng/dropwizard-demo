@@ -2,7 +2,7 @@
 Try out dropwizard, see how it works. 
 
     mvn package
-    java -jar ./target/ dropwizard-demo-1.0-SNAPSHOT.jar server
+    java -jar ./target/dropwizard-demo-1.0-SNAPSHOT.jar server
 
 Test
 
@@ -24,4 +24,8 @@ Test
     curl -v -X DELETE 'http://localhost:8080/hello-world/name/hao'
     200
 
+Run as command
+
+    java -jar ./target/dropwizard-demo-1.0-SNAPSHOT.jar mycommand -u hao
+    output: Hello hao
 

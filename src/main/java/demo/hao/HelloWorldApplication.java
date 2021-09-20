@@ -1,6 +1,7 @@
 package demo.hao;
 
 import demo.hao.api.HelloWorldResource;
+import demo.hao.command.MyCommand;
 import demo.hao.healthcheck.PingHealthCheck;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
@@ -18,7 +19,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 
     @Override
     public void initialize(Bootstrap<HelloWorldConfiguration> bootstrap) {
-        // nothing to do yet
+        bootstrap.addCommand(new MyCommand());
     }
 
     @Override
